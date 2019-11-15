@@ -2,16 +2,18 @@
 // Project: https://github.com/bcoin-org/bcrypto
 // Definitions by: Chainsafe <https://github.com/chainsafe>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-import * as whirlpool from "./whirpool";
-import * as keccak from "./keccak";
-import * as shake from "./shake";
-import * as shake128 from "./shake128";
 import * as siphashModule from "./siphash";
 
-export const Keccak: typeof keccak.Keccak;
-export const SHAKE: typeof shake.SHAKE;
-export const SHAKE128: typeof shake128.SHAKE128;
-export const Whirlpool: typeof whirlpool.Whirlpool;
+export { Keccak } from "./keccak";
+export { SHA3 } from "./sha3";
+export { SHA3_224 } from "./sha3-224";
+export { SHA3_256 } from "./sha3-256";
+export { SHA3_384 } from "./sha3-384";
+export { SHA3_512 } from "./sha3-512";
+export { SHAKE } from "./shake";
+export { SHAKE128 } from "./shake128";
+export { SHAKE256 } from "./shake256";
+export { Whirlpool } from "./whirpool";
 export const siphash: typeof siphashModule;
 // export const x25519: typeof ECDH;
 // export const x448: typeof ECDH;
