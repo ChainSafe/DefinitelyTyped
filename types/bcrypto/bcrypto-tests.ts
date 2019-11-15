@@ -1,9 +1,23 @@
-import { version, Whirlpool, siphash } from "bcrypto";
+import { version, Whirlpool, siphash, SHAKE, SHAKE128 } from "bcrypto";
 
 const buffer = Buffer.alloc(32);
 
+// shake
+let shake = new SHAKE();
+shake = shake.init(12);
+shake = shake.update(buffer);
+shake.final();
+
+// shake128
+let shake128 = new SHAKE128();
+shake128 = shake128.init();
+shake128 = shake128.update(buffer);
+shake128.final();
+
+SHAKE.digest(buffer);
+
 // siphash
-siphash.siphash(buffer, buffer);
+siphash.siphashD(buffer, buffer);
 siphash.siphash32(10, buffer);
 siphash.siphash64(1, 10, buffer);
 siphash.siphash32k256(1, buffer);

@@ -8,20 +8,19 @@ export class Whirlpool {
     blockSize: number;
     zero: Buffer;
     ctx: Whirlpool;
+
     /**
      * Initialize Whirlpool context.
      */
-    init(): Whirlpool;
+    init(): this;
 
     /**
      * Update Whirlpool context.
-     * @param {Buffer} data
      */
-    update(data: Buffer): Whirlpool;
+    update(data: Buffer): this;
 
     /**
      * Finalize Whirlpool context.
-     * @returns {Buffer}
      */
     final(): Buffer;
 

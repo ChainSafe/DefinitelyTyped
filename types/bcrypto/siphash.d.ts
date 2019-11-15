@@ -8,7 +8,7 @@ declare const native: number;
  * @param key - 128 bit key.
  * @returns [hi, lo]
  */
-declare function siphash(data: Buffer, key: Buffer): [number, number];
+declare function siphashD(data: Buffer, key: Buffer): [number, number];
 
 /**
  * Javascript siphash 2-4 implementation (32 bit ints).
@@ -62,7 +62,7 @@ declare function sipmod(data: Buffer, key: Buffer, mhi: number, mlo: number): [n
 
 export {
     native,
-    siphash,
+    siphashD,
     siphash32,
     siphash64,
     siphash32k256,
