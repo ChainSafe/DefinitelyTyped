@@ -5,6 +5,9 @@
 import * as siphashModule from "./siphash";
 
 export { Keccak } from "./keccak";
+export { SHA1 } from "./sha1";
+export { SHA256 } from "./sha256";
+export { SHA224 } from "./sha224";
 export { SHA3 } from "./sha3";
 export { SHA3_224 } from "./sha3-224";
 export { SHA3_256 } from "./sha3-256";
