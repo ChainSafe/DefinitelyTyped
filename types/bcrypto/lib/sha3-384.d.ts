@@ -1,8 +1,8 @@
 /// <reference types="node"/>
-import { SHA3 } from './sha3';
+import SHA3 from './sha3';
 
-export class SHA3_256 extends SHA3 {
-    ctx: SHA3_256;
+export default class SHA3_384 extends SHA3 {
+    ctx: SHA3_384;
 
     init(): this;
 

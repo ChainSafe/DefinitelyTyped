@@ -1,5 +1,3 @@
-/// <reference types="node"/>
-
 /**
  * sha256.js - SHA256 implementation for bcrypto
  * Copyright (c) 2016-2019, Christopher Jeffrey (MIT License).
@@ -14,7 +12,16 @@
  *   https://tools.ietf.org/html/rfc4634
  *   https://github.com/indutny/hash.js/blob/master/lib/hash/sha/256.js
  */
-export class SHA256 {
+
+/// <reference types="node"/>
+export default class SHA256 {
+    native: number;
+    id: string;
+    size: number;
+    bits: number;
+    blockSize: number;
+    zero: Buffer;
+    ctx: SHA256;
     init(): this;
     update(data: Buffer): this;
     final(): Buffer;

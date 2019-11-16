@@ -1,7 +1,7 @@
 /// <reference types="node"/>
-import { Keccak } from './keccak';
+import Keccak from './keccak';
 
-export class SHAKE extends Keccak {
+export default class SHAKE extends Keccak {
     final(len?: number): Buffer;
 
     static hash(): SHAKE;

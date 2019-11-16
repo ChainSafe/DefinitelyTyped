@@ -20,7 +20,7 @@
  *   https://github.com/emn178/js-sha3/blob/master/src/sha3.js
  */
 /// <reference types="node"/>
-export class Keccak {
+export default class Keccak {
     native: number;
     id: string;
     size: number;

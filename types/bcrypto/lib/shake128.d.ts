@@ -1,10 +1,10 @@
 /// <reference types="node"/>
-import { SHAKE } from './shake';
+import SHAKE from './shake';
 
-export class SHAKE256 extends SHAKE {
+export default class SHAKE128 extends SHAKE {
     init(): this;
 
-    static hash(): SHAKE256;
+    static hash(): SHAKE128;
     // static hmac(len?: number): HMAC;
     static digest(data: Buffer, bits?: number, len?: number): Buffer;
     static root(left: Buffer, right: Buffer, bits?: number, len?: number): Buffer;

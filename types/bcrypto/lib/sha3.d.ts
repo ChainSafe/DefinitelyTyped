@@ -1,7 +1,7 @@
 /// <reference types="node"/>
-import { Keccak } from './keccak';
+import Keccak from './keccak';
 
-export class SHA3 extends Keccak {
+export default class SHA3 extends Keccak {
     ctx: SHA3;
 
     final(): Buffer;
