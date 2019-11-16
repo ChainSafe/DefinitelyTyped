@@ -2,7 +2,11 @@
 // Project: https://github.com/bcoin-org/bcrypto
 // Definitions by: Chainsafe <https://github.com/chainsafe>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+
+/// <reference path="lib/whirlpool.d.ts" />
+
 import * as siphashModule from "./siphash";
+import WhirlpoolClass from './lib/whirlpool';
 
 export { Keccak } from "./keccak";
 export { SHA1 } from "./sha1";
@@ -16,7 +20,8 @@ export { SHA3_512 } from "./sha3-512";
 export { SHAKE } from "./shake";
 export { SHAKE128 } from "./shake128";
 export { SHAKE256 } from "./shake256";
-export { Whirlpool } from "./whirpool";
+
+export const Whirlpool: typeof WhirlpoolClass;
 export const siphash: typeof siphashModule;
 // export const x25519: typeof ECDH;
 // export const x448: typeof ECDH;

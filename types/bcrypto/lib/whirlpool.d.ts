@@ -1,6 +1,6 @@
 /// <reference types="node"/>
 
-export class Whirlpool {
+export default class Whirlpool {
     native: number;
     id: string;
     size: number;
