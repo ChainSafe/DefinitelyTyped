@@ -20,7 +20,7 @@
  *   https://github.com/emn178/js-sha3/blob/master/src/sha3.js
  */
 /// <reference types="node"/>
-export default class Keccak {
+declare class Keccak {
     native: number;
     id: string;
     size: number;
@@ -38,3 +38,5 @@ export default class Keccak {
     static multi(x: Buffer, y: Buffer, z: Buffer, bits?: number, pad?: number, len?: number): Buffer;
     static mac(data: Buffer, key: Buffer, bits?: number, pad?: number, len?: number): Buffer;
 }
+
+export = Keccak;

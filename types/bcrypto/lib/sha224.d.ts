@@ -1,5 +1,5 @@
 /// <reference types="node"/>
-import SHA256 from './sha256';
+import { SHA256 } from '../';
 
 /**
  * sha224.js - SHA224 implementation for bcrypto
@@ -15,7 +15,7 @@ import SHA256 from './sha256';
  *   https://tools.ietf.org/html/rfc4634
  *   https://github.com/indutny/hash.js/blob/master/lib/hash/sha/224.js
  */
-export default class SHA224 extends SHA256 {
+declare class SHA224 extends SHA256 {
     static hash(): SHA224;
     // static hmac(): HMAC;
     static digest(data: Buffer): Buffer;
@@ -23,3 +23,5 @@ export default class SHA224 extends SHA256 {
     static multi(x: Buffer, y: Buffer, z: Buffer): Buffer;
     static mac(data: Buffer, key: Buffer): Buffer;
 }
+
+export = SHA224;

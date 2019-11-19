@@ -1,6 +1,6 @@
 /// <reference types="node"/>
 
-export default class Whirlpool {
+declare class Whirlpool {
     native: number;
     id: string;
     size: number;
@@ -8,6 +8,7 @@ export default class Whirlpool {
     blockSize: number;
     zero: Buffer;
     ctx: Whirlpool;
+    constructor();
 
     /**
      * Initialize Whirlpool context.
@@ -36,3 +37,5 @@ export default class Whirlpool {
 
     static mac(data: Buffer, key: Buffer): Buffer;
 }
+
+export = Whirlpool;

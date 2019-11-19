@@ -14,7 +14,7 @@
  */
 
 /// <reference types="node"/>
-export default class SHA256 {
+declare class SHA256 {
     native: number;
     id: string;
     size: number;
@@ -22,6 +22,7 @@ export default class SHA256 {
     blockSize: number;
     zero: Buffer;
     ctx: SHA256;
+    constructor();
     init(): this;
     update(data: Buffer): this;
     final(): Buffer;
@@ -33,3 +34,5 @@ export default class SHA256 {
     static multi(x: Buffer, y: Buffer, z: Buffer): Buffer;
     static mac(data: Buffer, key: Buffer): Buffer;
 }
+
+export = SHA256;

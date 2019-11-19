@@ -15,7 +15,7 @@
  *   http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf
  *   https://github.com/indutny/hash.js/blob/master/lib/hash/sha/1.js
  */
-export default class SHA1 {
+declare class SHA1 {
     init(): this;
     update(data: Buffer): this;
     final(): Buffer;
@@ -27,3 +27,5 @@ export default class SHA1 {
     static multi(x: Buffer, y: Buffer, z: Buffer): Buffer;
     static mac(data: Buffer, key: Buffer): Buffer;
 }
+
+export = SHA1;

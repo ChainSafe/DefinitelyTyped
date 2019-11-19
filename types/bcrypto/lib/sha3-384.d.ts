@@ -1,7 +1,7 @@
 /// <reference types="node"/>
-import SHA3 from './sha3';
+import SHA3 = require('./sha3');
 
-export default class SHA3_384 extends SHA3 {
+declare class SHA3_384 extends SHA3 {
     ctx: SHA3_384;
 
     init(): this;
@@ -13,3 +13,5 @@ export default class SHA3_384 extends SHA3 {
     static multi(x: Buffer, y: Buffer, z: Buffer): Buffer;
     static mac(data: Buffer, key: Buffer): Buffer;
 }
+
+export = SHA3_384;

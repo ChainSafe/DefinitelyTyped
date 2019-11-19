@@ -1,7 +1,7 @@
 /// <reference types="node"/>
-import Keccak from './keccak';
+import Keccak = require('./keccak');
 
-export default class SHA3 extends Keccak {
+declare class SHA3 extends Keccak {
     ctx: SHA3;
 
     final(): Buffer;
@@ -13,3 +13,5 @@ export default class SHA3 extends Keccak {
     static multi(x: Buffer, y: Buffer, z: Buffer, bits?: number): Buffer;
     static mac(data: Buffer, key: Buffer, bits?: number): Buffer;
 }
+
+export = SHA3;

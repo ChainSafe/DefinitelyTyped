@@ -1,7 +1,7 @@
 /// <reference types="node"/>
-import SHAKE from './shake';
+import { SHAKE } from '../';
 
-export default class SHAKE128 extends SHAKE {
+declare class SHAKE128 extends SHAKE {
     init(): this;
 
     static hash(): SHAKE128;
@@ -11,3 +11,5 @@ export default class SHAKE128 extends SHAKE {
     static multi(x: Buffer, y: Buffer, z: Buffer, bits?: number, len?: number): Buffer;
     static mac(data: Buffer, key: Buffer, bits?: number, len?: number): Buffer;
 }
+
+export = SHAKE128;

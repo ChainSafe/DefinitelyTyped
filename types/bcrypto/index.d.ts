@@ -4,22 +4,32 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference path="lib/keccak.d.ts" />
+/// <reference path="lib/sha1.d.ts" />
+/// <reference path="lib/sha3.d.ts" />
+/// <reference path="lib/sha3-256.d.ts" />
+/// <reference path="lib/sha3-384.d.ts" />
+/// <reference path="lib/sha3-512.d.ts" />
+/// <reference path="lib/sha224.d.ts" />
+/// <reference path="lib/sha256.d.ts" />
+/// <reference path="lib/shake.d.ts" />
+/// <reference path="lib/shake128.d.ts" />
+/// <reference path="lib/shake256.d.ts" />
 /// <reference path="lib/siphash.d.ts" />
 /// <reference path="lib/whirlpool.d.ts" />
 
+import KeccakClass = require("./lib/keccak");
+import SHA1Class = require('./lib/sha1');
+import SHA3Class = require('./lib/sha3');
+import SHA3_256Class = require('./lib/sha3-256');
+import SHA3_384Class = require('./lib/sha3-384');
+import SHA3_512Class = require('./lib/sha3-512');
+import SHA224Class = require('./lib/sha224');
+import SHA256Class = require('./lib/sha256');
+import SHAKEClass = require('./lib/shake');
+import SHAKE128Class = require('./lib/shake128');
+import SHAKE256Class = require('./lib/shake256');
 import * as siphashModule from "./lib/siphash";
-import WhirlpoolClass from './lib/whirlpool';
-import KeccakClass from "./lib/keccak";
-import SHA1Class from './lib/sha1';
-import SHA3Class from './lib/sha3';
-import SHA3_256Class from './lib/sha3-256';
-import SHA3_384Class from './lib/sha3-384';
-import SHA3_512Class from './lib/sha3-512';
-import SHA224Class from './lib/sha224';
-import SHA256Class from './lib/sha256';
-import SHAKEClass from './lib/shake';
-import SHAKE128Class from './lib/shake128';
-import SHAKE256Class from './lib/shake256';
+import WhirlpoolClass = require('./lib/whirlpool');
 
 export const Keccak: typeof KeccakClass;
 
